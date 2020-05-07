@@ -16,3 +16,6 @@
    - Java新特性，包括lamba表达式等；   
 
 3. 项目介绍  
+
+4. 参考资料  
+   [JavaGuider](https://github.com/Snailclimb/JavaGuide)
