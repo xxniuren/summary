@@ -16,7 +16,7 @@ public class ThreadLocalExample {
 
     public void run () {
         for (int i = 0; i < 3; i++) {
-            MyThread myThread = new MyThread(threadLocal);
+            MyThread myThread = new MyThread();
             myThread.start();
             String threadName = Thread.currentThread().getName();
             String threadNameIn = threadLocal.get();

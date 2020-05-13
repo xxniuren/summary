@@ -21,12 +21,12 @@ import java.util.List;
  * 9. 把 6拿出来，list=[2,2,6]，此时target<0，把6吐出来，继续遍历第2步骤去查询；
  * 10. 把 7 拿出来，不满足，此时回到1步骤。
  **/
-public class CombinationSum39 {
+public class Solution39 {
 
     public static void main(String[] args) {
         int [] candidates = {2,3,6,7};
         int target = 7;
-        CombinationSum39 combinationSum39 = new CombinationSum39();
+        Solution39 combinationSum39 = new Solution39();
         List<List<Integer>> res = combinationSum39.combinationSum(candidates, target);
         System.out.println(res);
     }

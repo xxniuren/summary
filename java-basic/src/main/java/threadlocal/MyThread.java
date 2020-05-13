@@ -9,15 +9,11 @@ package threadlocal;
 public class MyThread extends Thread {
 
     private String threadName;
-    public static ThreadLocal<String> threadLocal;
-    public MyThread (ThreadLocal<String> threadLocalBuf) {
-        threadLocal = threadLocalBuf;
-    }
 
     @Override
     public void run() {
         threadName = Thread.currentThread().getName();
-        threadLocal.set(threadName);
+        ThreadLocalExample.threadLocal.set(threadName);
         System.out.println("MyThread run, threadName: " + threadName);
     }
 }
