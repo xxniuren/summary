@@ -4,9 +4,12 @@
  * @date: 2020/5/9
  * @description:
  **/
-public class ValidateDuShu36 {
+public class Solution36 {
     public static void main(String[] args) {
-
+        char[][] board = {{1,2,3}};
+        Solution36 solution = new Solution36();
+        boolean res = solution.isValidSudoku(board);
+        System.out.println(res);
     }
 
     public boolean isValidSudoku(char[][] board) {

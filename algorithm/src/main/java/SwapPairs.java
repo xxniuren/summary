@@ -1,5 +1,3 @@
-package leetcode;
-
 /**
  * @author: yushuang
  * @email: yushuang@qiyi.com
