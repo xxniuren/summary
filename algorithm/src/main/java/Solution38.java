@@ -4,7 +4,7 @@
  * @date: 2020/5/11
  * @description:
  **/
-public class AppearanceSequence38 {
+public class Solution38 {
 
     public static void main(String[] args) {
 
