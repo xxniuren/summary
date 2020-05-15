@@ -9,6 +9,7 @@ import java.security.Signature;
  * @description:
  **/
 public class Singleton {
+    //volatile 加上时 为了防止指令重排序
     private volatile static Singleton instance = null;
     private Singleton instance3 = null;
     private Singleton () {}
@@ -16,7 +17,7 @@ public class Singleton {
     public static Singleton getInstance() {
         if (null == instance) {
             synchronized (Singleton.class) {
-                instance = new Singleton();
+                if (null == instance) instance = new Singleton();
             }
         }
         return instance;
