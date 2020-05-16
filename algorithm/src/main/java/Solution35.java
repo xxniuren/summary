@@ -4,11 +4,11 @@
  * @date: 2020/5/8
  * @description:
  **/
-public class SearchInsertPostion35 {
+public class Solution35 {
     public static void main(String[] args) {
         int[] nums = {1,3,5,6};
         int target = 7;
-        SearchInsertPostion35 search = new SearchInsertPostion35();
+        Solution35 search = new Solution35();
         int pos = search.traverse(nums, target);
         System.out.println(pos);
     }
