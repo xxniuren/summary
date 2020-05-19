@@ -14,8 +14,38 @@ public class Solution45 {
         System.out.println(solution.jump(nums));
     }
 
-    //当前的每一步走到最大化，就是贪心策略
+    /**
+     * 上题可以改造为：不重复遍历，只遍历一次则可。
+     * 例如：3 3 1 3 1 1 1
+     *
+     * 第一次：i = 0，此时 end = i, end改为 3，就是最远可以跳到index = 3 上
+     * 第二次：i = 1, 此时 end = 3，max = 3+1，就是说走一步的话，下一步可以到 index = 4上
+     * 第三次：i = 2, 此时 end = 3, max = 1+2 就是说走两步的话，下一步可以到index = 3上，没有到达最大化
+     * 第四次：i = 3，此时 end = 3， max = 3+3 就是说走三步的话，下一步可以到index = 6上，这个是最大化，此时i=end=3了，需要做抉择，那么选择走三步，让下次可以多跳三步
+     * 第五次：i = 4, 此时 end = 6，max = 7，就是说走一步的话，下一步可以到index = 7上。
+     * 第六次：i = 5， 此时end = 6，max = 8，就是再走两步就退出了，所以step++；
+     * @param nums
+     * @return
+     */
     public int jump(int[] nums) {
+        int end = 0;
+        int max = 0;
+        int step = 0;
+        if (nums.length <= 1) return 0;
+        for (int i = 0; i < nums.length; i++) {
+            max = Math.max(max, i + nums[i]);
+            if (max >= nums.length - 1) return ++step;
+            if (end == i) {
+                end = max;
+                step++;
+            }
+        }
+        return step;
+    }
+
+
+    /*当前的每一步走到最大化，就是贪心策略
+    public int jumpForecast(int[] nums) {
         int i = 0;
         int step = 0;
         while (i < nums.length - 1) {
@@ -34,6 +64,8 @@ public class Solution45 {
             step++;
         }
         return step;
-    }
+    }*/
+
+
 
 }
