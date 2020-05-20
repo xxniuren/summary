@@ -12,6 +12,7 @@
         <module>algorithm</module>
         <module>doc</module>
         <module>java-basic</module>
+        <module>spring-boot</module>
     </modules>
 
 
