@@ -9,7 +9,6 @@
 public class Solution63 {
     public static void main(String[] args) {
         Solution63 solution = new Solution63();
-        int[][] obstacleGrid_ = new int[][]{{0, 0, 0}, {0, 1, 0}, {0, 0, 0}};
         int[][] obstacleGrid = new int[][]{{0, 0, 0}, {0, 1, 0}, {0, 0, 0}};
         System.out.println(solution.uniquePathsWithObstacles(obstacleGrid));
     }
