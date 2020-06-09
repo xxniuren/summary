@@ -22,12 +22,13 @@ public class Solution90 {
 
     public List<List<Integer>> subsetsWithDup(int[] nums) {
         List<List<Integer>> lists = new ArrayList<>();
-        Boolean[] visit = new Boolean[nums.length];
         List<Integer> list = new ArrayList<>();
         Arrays.sort(nums);
-        helper(lists, list, nums, visit,0);
+        helper(lists, list, nums, 0);
         return lists;
     }
+
+
 
     /**
      * 排序加剪枝
@@ -37,16 +38,16 @@ public class Solution90 {
      * @param nums
      * @param index
      */
-    private void helper(List<List<Integer>> lists, List<Integer> list, int[] nums, Boolean[] visit, int index) {
+    private void helper(List<List<Integer>> lists, List<Integer> list, int[] nums, int index) {
         lists.add(new ArrayList<>(list));
         for (int i = index; i < nums.length; i++) {
-            if (i > 0 && !visit[i - 1] && nums[i] == nums[i - 1]) continue;
-            visit[i] = true;
+            if (i > index && nums[i] == nums[i - 1]) continue;
             list.add(nums[i]);
-            helper(lists, list, nums, visit, index + 1);
+            helper(lists, list, nums, i + 1);
             list.remove(list.size() - 1);
-            visit[i] = false;
         }
     }
+
+
 
 }
