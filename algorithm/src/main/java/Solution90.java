@@ -31,7 +31,7 @@ public class Solution90 {
 
 
     /**
-     * 排序加剪枝
+     * 排序加剪枝，组合 i = tmp, 排列 i = 0，这点需要注意
      *
      * @param lists
      * @param list
