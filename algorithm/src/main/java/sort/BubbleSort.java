@@ -8,6 +8,6 @@ package sort;
  **/
 public class BubbleSort {
     public void bubbleSort(int a[]) {
-//        SortCollection.getLength(a);
+//        online.SortCollection.getLength(a);
     }
 }
