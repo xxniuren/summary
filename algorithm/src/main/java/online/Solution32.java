@@ -19,7 +19,7 @@ public class Solution32 {
     }
     public int longestValidParentheses(String s) {
         if (s == null || s.length() == 0) return 0;
-        int[] val = new int[s.length()];
+        int[] val = new int[s.length() + 1];
         Stack<Integer> indexVals = new Stack<>();
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == '(') {
@@ -44,7 +44,6 @@ public class Solution32 {
                 currLen = 0;
             }
         }
-        maxLen = maxLen < currLen ? currLen : maxLen;
         return maxLen;
     }
 }
