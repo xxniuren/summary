@@ -1,5 +1,7 @@
 package test;
 
+import online.Solution31;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -7,19 +9,24 @@ import java.util.List;
 /**
  * @author: yushuang
  * @email: yushuang@qiyi.com
- * @date: 2020/7/6
+ * @date: 2020/10/19
  * @description:
+ *
+ * 给定一个无重复元素的数组 candidates 和一个目标数 target ，找出 candidates 中所有可以使数字和为 target 的组合。
+ *
+ * candidates 中的数字可以无限制重复被选取。
+ *
  **/
-public class Solution40 {
+public class Solution39 {
     public static void main(String[] args) {
-        Solution40 solution = new Solution40();
-        int[] candidates = {10,1,2,7,6,1,5};
-        int target = 8;
-        List<List<Integer>> res = solution.combinationSum2(candidates, target);
+        Solution39 solution = new Solution39();
+        int[] candidates = {2,3,6,7};
+        int target = 7;
+        List<List<Integer>> res = solution.combinationSum(candidates, target);
         System.out.println(res.toString());
     }
 
-    public List<List<Integer>> combinationSum2(int[] candidates, int target) {
+    public List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> res = new ArrayList<>();
         Arrays.sort(candidates);
         backtrace(res, new ArrayList<>(), candidates, 0, target);
@@ -34,12 +41,10 @@ public class Solution40 {
             return;
         } else {
             for (int i = start; i < candidates.length && candidates[i] <= remain; i++) {
-                if (i > start && candidates[i] == candidates[i - 1]) continue;
                 list.add(candidates[i]);
-                backtrace(res, list, candidates, i + 1, remain - candidates[i]);
+                backtrace(res, list, candidates, i, remain - candidates[i]);
                 list.remove(list.size() - 1);
             }
         }
     }
 }
-
