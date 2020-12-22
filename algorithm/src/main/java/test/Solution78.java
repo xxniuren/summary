@@ -10,6 +10,8 @@ import java.util.List;
  * @date: 2020/12/22
  * @description:
  * 给定一组不含重复元素的整数数组 nums，返回该数组所有可能的子集（幂集）。
+ *
+ * 整理一下排列的解法和组合的解法，39 40 46 47 77 78 79
  **/
 public class Solution78 {
 
