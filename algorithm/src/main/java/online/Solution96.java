@@ -14,7 +14,7 @@ public class Solution96 {
         Solution96 solution = new Solution96();
         System.out.println(solution.numTrees(2));
     }
-    //backtrace
+    //classify.backtrace
     public int numTrees(int n) {
         if (n ==0 || n == 1) return 1;
         int res = 0;

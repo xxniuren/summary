@@ -1,4 +1,4 @@
-package backtrace;
+package classify.backtrace;
 
 /**
  * @author: yushuang
@@ -6,5 +6,5 @@ package backtrace;
  * @date: 2020/12/23
  * @description:
  **/
-public class Solution79 {
+public class Solution47 {
 }
