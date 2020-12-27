@@ -1,14 +1,111 @@
-leetcode题型解析  
+leetcode题型解析 整体110道题  
+题分为如下几类：  
+- 堆栈问题  
+  Solution20  
+  
+- -- 链表问题 & 树问题   
+  Solution2   
+  Solution19  
+  Solution21   
+  Solution23   
+  Solution24  
+  Solution25  
+  Solution61  
+  Solution82  
+  Solution83  
+  Solution86  
+  Solution87  
+  Solution92  
+  Solution94  
+  Solution95  
+  Solution98  
+  Solution99  
+  Solution100  
+  Solution101  
+  Solution102  
+  Solution103  
+  Solution104  
+  Solution105  
+  Solution106  
+  Solution107  
+  Solution108   
+  Solution109  
+  Solution110    
+  
+- 回溯问题(**已处理**)  
+  Solution22  
+  Solution39  
+  Solution40  
+  Solution46  
+  Solution47  
+  Solution51  
+  Solution52  
+  Solution77  
+  Solution78  
+  Solution79  
+  Solution90  
+  Solution96    
+  
+- 排序问题    
+  Solution4     
+  Solution31  
+  Solution56  
+  Solution57   
+  
+- 查找问题  
+  Solution5   
+  Solution9   
+  Solution14   
+  Solution28  
+  Solution30    
+  Solution32  
+  Solution33  
+  Solution35  
+  Solution41    
+  Solution74  
+  Solution81    
+  
+- 动态规划(**已处理**)    
+  Solution42  
+  Solution53  
+  Solution62   
+  Solution63  
+  Solution64  
+  Solution70  
+  Solution72  
+  Solution85  
+  Solution91  
+  Solution97    
+  
+- 贪心算法    
+  Solution45
 
-34. 在排序数组中查找元素的第一个和最后一个位置
-    说明：给定一个按照升序排列的整数数组 nums，和一个目标值 target。找出给定目标值在数组中的开始位置和结束位置。
-    你的算法时间复杂度必须是 O(log n) 级别。如果数组中不存在目标值，返回 [-1, -1]。
-    链接：https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array
-    
-35. 搜索插入位置
-    给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。
-    你可以假设数组中无重复元素。
-    链接：https://leetcode-cn.com/problems/search-insert-position
-    
-38. 外观数组  
-    没啥好说的。。
+- 数学计算问题   
+  Solution6 -》z字形打印输出   
+  Solution7 -》数字反转  
+  Solution8 -》字符串转换成整形 数学计算   
+  Solution48    
+  Solution50  
+  Solution54  
+  Solution59  
+  Solution66  
+  Solution69  
+  Solution73    
+  
+- 数据结构问题    
+  Solution49  
+  Solution55  
+  Solution76 -- 滑动窗口    
+  
+- 指针问题  
+  Solution11 -》容器最大盛水量 双指针问题  
+  Solution15 -》三指针问题   
+  Solution16 -》三指针问题    
+  Solution18 -》三指针问题，四个元素查找    
+  Solution26  
+  Solution27  
+  Solution44  
+  Solution80  
+  Solution84 -- 也不是指针，就是求局部最小    
+  Solution88    
+   
