@@ -14,7 +14,7 @@ public class Solution82 {
 
     /**
      *
-     * 这个要画一下链表图
+     * 这个要画一下链表图，这个是重复的元素一次都不能出现
      * @param head
      * @return
      */
