@@ -16,6 +16,14 @@ public class Solution92 {
         System.out.println(listNode);
     }
 
+    /**
+     * pre 和 cur 不动，next一点点走
+     *
+     * @param head
+     * @param m
+     * @param n
+     * @return
+     */
     public ListNode reverseBetween(ListNode head, int m, int n) {
         if (null == head) return null;
         ListNode dummy = new ListNode(-1);
