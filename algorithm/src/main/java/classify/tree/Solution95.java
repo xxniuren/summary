@@ -38,6 +38,7 @@ public class Solution95 {
         for (int i = start; i <= end; i++) {
             List<TreeNode> left = backtrace(start, i - 1);
             List<TreeNode> right = backtrace(i + 1, end);
+            // 这两层循环是构造本层子树
             for (TreeNode leftTree : left) {
                 for (TreeNode rightTree : right) {
                     TreeNode iNode = new TreeNode(i);
