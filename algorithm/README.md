@@ -15,12 +15,12 @@ leetcode题型解析 整体110道题
   Solution90  
   Solution96  
   
-- 数据结构问题    
+- 数据结构问题   
+  Solution20 -- 堆栈问题 
   Solution45 -- 贪心算法
   Solution49 
   Solution55 -- 贪心算法
   Solution76 -- 滑动窗口  
-  Solution20 -- 堆栈问题  
   
   
 - 动态规划(**已处理**)    

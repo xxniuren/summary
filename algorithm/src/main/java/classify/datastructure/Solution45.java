@@ -51,14 +51,14 @@ public class Solution45 {
     public int jump(int[] nums) {
         if (nums.length == 0) return 0;
         int step = 0;
-        int currReach = nums[0];
-        int nextReach = nums[0];
-        for (int i = 1; i < nums.length; i++) {
-            if (currReach < i) { // 这里限定为小于
+        int currReach = 0, nextReach = nums[0];
+        for (int i = 0; i < nums.length; i++) {
+            if (currReach < i) {
+                // 必须要跳跃了
                 step++;
                 currReach = nextReach;
             }
-            nextReach = (i + nums[i]) > nextReach ? (i + nums[i]) : nextReach;
+            nextReach = Math.max(nextReach, (i + nums[i]));
         }
         return step;
     }
