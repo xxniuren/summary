@@ -1,7 +1,7 @@
 leetcode题型解析 整体110道题  
 题分为如下几类：  
 
-- 回溯问题(**已处理**)  
+- 回溯问题(**已处理第一遍，两天刷一遍**)  
   Solution22  
   Solution39  
   Solution40  
@@ -12,10 +12,11 @@ leetcode题型解析 整体110道题
   Solution77  
   Solution78  
   Solution79  
+  Solution87
   Solution90  
   Solution96  
   
-- 数据结构问题   
+- 数据结构问题（1上午刷完，**已处理第一遍**）   
   Solution20 -- 堆栈问题 
   Solution45 -- 贪心算法
   Solution49 
@@ -23,7 +24,7 @@ leetcode题型解析 整体110道题
   Solution76 -- 滑动窗口  
   
   
-- 动态规划(**已处理**)    
+- 动态规划(**已处理第一遍，两天刷一遍**)    
   Solution42  
   Solution53  
   Solution62   
@@ -35,7 +36,7 @@ leetcode题型解析 整体110道题
   Solution91  
   Solution97    
   
-- 链表问题   
+- 链表问题 （两天刷一遍）   
   Solution2   
   Solution19  
   Solution21   
@@ -46,10 +47,9 @@ leetcode题型解析 整体110道题
   Solution82  
   Solution83  
   Solution86  
-  Solution87  
   Solution92 
   
-- 数学计算问题   
+- 数学计算问题（两天刷一遍）   
   Solution6 -》z字形打印输出   
   Solution7 -》数字反转  
   Solution8 -》字符串转换成整形 数学计算   
@@ -61,7 +61,7 @@ leetcode题型解析 整体110道题
   Solution69  
   Solution73  
   
-- 指针问题  
+- 指针问题（两天刷一遍）  
   Solution11 -》容器最大盛水量 双指针问题  
   Solution15 -》三指针问题   
   Solution16 -》三指针问题    
@@ -73,7 +73,7 @@ leetcode题型解析 整体110道题
   Solution84 -- 也不是指针，就是求局部最小    
   Solution88 
 
-- 查找问题  
+- 查找问题（两天刷一遍）  
   Solution5   
   Solution9   
   Solution14   
@@ -86,13 +86,13 @@ leetcode题型解析 整体110道题
   Solution74  
   Solution81            
 
-- 排序问题    
+- 排序问题（1天刷一遍）    
   Solution4     
   Solution31  
   Solution56  
   Solution57  
 
-- 树问题  
+- 树问题（一天刷一遍）  
   Solution94  
   Solution95  
   Solution96  
