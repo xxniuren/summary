@@ -1,5 +1,6 @@
 package classify.linklist;
 
+import javax.swing.*;
 import java.util.List;
 
 /**
@@ -17,31 +18,63 @@ public class Solution92 {
     }
 
     /**
-     * pre 和 cur 不动，next一点点走
-     *
+     * 反转链表，头插法
      * @param head
      * @param m
      * @param n
      * @return
      */
     public ListNode reverseBetween(ListNode head, int m, int n) {
-        if (null == head) return null;
-        ListNode dummy = new ListNode(-1);
-        dummy.next = head;
-        ListNode pre = dummy, cur = head, next;
+        ListNode root = new ListNode(-1);
+        root.next = head;
+        ListNode pre = root;
         for (int i = 1; i < m; i++) {
             pre = pre.next;
-            cur = cur.next;
         }
-        next = cur.next;
+        ListNode curr = pre.next;
+        ListNode next = curr.next;
         for (int i = m; i < n; i++) {
-            cur.next = next.next;
+            ListNode tmp = next.next;
             next.next = pre.next;
             pre.next = next;
-            next = cur.next;
+            curr.next = tmp;
+            next = curr.next;
         }
-        return dummy.next;
+        return root.next;
     }
+
+
+
+
+
+
+
+//    /**
+//     * pre 和 cur 不动，next一点点走
+//     *
+//     * @param head
+//     * @param m
+//     * @param n
+//     * @return
+//     */
+//    public ListNode reverseBetween(ListNode head, int m, int n) {
+//        if (null == head) return null;
+//        ListNode dummy = new ListNode(-1);
+//        dummy.next = head;
+//        ListNode pre = dummy, cur = head, next;
+//        for (int i = 1; i < m; i++) {
+//            pre = pre.next;
+//            cur = cur.next;
+//        }
+//        next = cur.next;
+//        for (int i = m; i < n; i++) {
+//            cur.next = next.next;
+//            next.next = pre.next;
+//            pre.next = next;
+//            next = cur.next;
+//        }
+//        return dummy.next;
+//    }
 
     public ListNode init() {
         ListNode head = new ListNode(1);

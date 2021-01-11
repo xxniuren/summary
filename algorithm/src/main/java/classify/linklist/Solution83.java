@@ -27,23 +27,42 @@ public class Solution83 {
         return head;
     }
 
+    // 删除重复元素，每个元素只能出现一次
     public ListNode deleteDuplicates(ListNode head) {
-        ListNode dummy = new ListNode(-1);
-        dummy.next = head;
-        ListNode point = dummy.next;
-        while (point != null && point.next != null) {
-            if (point.val == point.next.val) {
-                //这里查找出多少个重复的
-                ListNode tmp = point;
+        ListNode root = new ListNode(-1);
+        root.next = head;
+        ListNode curr = root;
+        while (curr.next != null && curr.next.next != null) {
+            if (curr.next.val == curr.next.next.val) {
+                ListNode tmp = curr.next;
                 while (tmp.next != null && tmp.val == tmp.next.val) {
                     tmp = tmp.next;
                 }
-                point.next = tmp.next;
+                curr.next = tmp;
+            } else {
+                curr = curr.next;
             }
-            point = point.next;
         }
-        return dummy.next;
+        return root.next;
     }
+
+//    public ListNode deleteDuplicates(ListNode head) {
+//        ListNode dummy = new ListNode(-1);
+//        dummy.next = head;
+//        ListNode point = dummy.next;
+//        while (point != null && point.next != null) {
+//            if (point.val == point.next.val) {
+//                //这里查找出多少个重复的
+//                ListNode tmp = point;
+//                while (tmp.next != null && tmp.val == tmp.next.val) {
+//                    tmp = tmp.next;
+//                }
+//                point.next = tmp.next;
+//            }
+//            point = point.next;
+//        }
+//        return dummy.next;
+//    }
 
     public class ListNode {
         int val;

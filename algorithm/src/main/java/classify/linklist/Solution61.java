@@ -26,10 +26,8 @@ public class Solution61 {
     }
 
     /**
-     * 1. 找到尾节点 和尾节点上游节点，tail
-     * 2. 将尾节点和头节点串起来
-     * 3. 将尾节点
-     * 尾节点往前走k步
+     * 1. 将链表串为环链表，然后走 len - (k % cnt) - 1步骤；
+     * 2. 处理链表
      * @param head
      * @param k
      * @return

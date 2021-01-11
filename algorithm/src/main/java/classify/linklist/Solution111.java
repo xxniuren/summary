@@ -26,17 +26,34 @@ public class Solution111 {
     }
 
     public ListNode reverse(ListNode head) {
-        ListNode curr = head;
-        ListNode next = head.next;
-        head.next = null;
+        if (head == null) return null;
+        ListNode root = new ListNode(-1);
+        root.next = head;
+        ListNode pre = root, curr = root.next, next = curr.next;
         while (next != null) {
             ListNode tmp = next.next;
-            next.next = curr;
-            curr = next;
-            next = tmp;
+            next.next = pre.next;
+            pre.next = next;
+            curr.next = tmp;
+            next = curr.next;
         }
-        return curr;
+        return root.next;
     }
+
+
+
+//    public ListNode reverse(ListNode head) {
+//        ListNode curr = head;
+//        ListNode next = head.next;
+//        head.next = null;
+//        while (next != null) {
+//            ListNode tmp = next.next;
+//            next.next = curr;
+//            curr = next;
+//            next = tmp;
+//        }
+//        return curr;
+//    }
 
     public class ListNode {
         int val;
