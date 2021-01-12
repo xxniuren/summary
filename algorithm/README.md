@@ -36,7 +36,7 @@ leetcode题型解析 整体110道题
   Solution91  
   Solution97    
   
-- 链表问题 （两天刷一遍）   
+- 链表问题 （**已处理第一遍，两天刷一遍**）   
   Solution2   
   Solution19  
   Solution21   
@@ -92,7 +92,7 @@ leetcode题型解析 整体110道题
   Solution56  
   Solution57  
 
-- 树问题（一天刷一遍）  
+- 树问题（**已处理第一遍，一天刷一遍**）  
   Solution94  
   Solution95  
   Solution96  

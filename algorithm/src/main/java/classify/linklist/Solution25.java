@@ -32,7 +32,7 @@ public class Solution25 {
             curr.next = tmp;
             next = curr.next;
         }
-        curr.next = reverseKGroup(curr, k);
+        head.next = reverseKGroup(curr, k);
         return null;
     }
 
