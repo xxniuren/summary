@@ -49,14 +49,12 @@ leetcode题型解析 整体110道题
   Solution86  
   Solution92 
   
-- 数学计算问题（两天刷一遍）   
+- 数学计算问题（两天刷一遍，不考虑设计步骤太多的，例如螺旋矩阵之类的题）   
   Solution6 -》z字形打印输出   
   Solution7 -》数字反转  
   Solution8 -》字符串转换成整形 数学计算   
   Solution48    
   Solution50  
-  Solution54  
-  Solution59  
   Solution66  
   Solution69  
   Solution73  
