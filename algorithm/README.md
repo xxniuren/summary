@@ -49,15 +49,15 @@ leetcode题型解析 整体110道题
   Solution86  
   Solution92 
   
-- 数学计算问题（两天刷一遍，不考虑设计步骤太多的，例如螺旋矩阵之类的题）   
+- 数学计算问题（**已处理，两天刷一遍，不考虑设计步骤太多的，例如螺旋矩阵之类的题**）   
   Solution6 -》z字形打印输出   
   Solution7 -》数字反转  
   Solution8 -》字符串转换成整形 数学计算   
-  Solution48    
-  Solution50  
-  Solution66  
-  Solution69  
-  Solution73  
+  Solution48 -》二维数组旋转90度问题，先上下-》后左右   
+  Solution50 -》pow问题 
+  Solution66 -》数组加一问题，从低位往高位计算  
+  Solution69 -》求平方根问题，二分查找
+  Solution73 -》矩阵置零问题 
   
 - 指针问题（两天刷一遍）  
   Solution11 -》容器最大盛水量 双指针问题  
@@ -96,7 +96,8 @@ leetcode题型解析 整体110道题
   Solution96  
   Solution102  
   Solution105  
-  Solution106  
+  Solution106
+  Solution112 路径总和  
  
   
    
