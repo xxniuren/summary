@@ -15,8 +15,26 @@ public class Solution84 {
         System.out.println(maxArea);
     }
 
-    // 从两边往中间走，寻找最大的
     public int largestRectangleArea(int[] heights) {
+        if (heights == null || heights.length == 0) return 0;
+        int maxArea = 0;
+        int left = 0, right = heights.length - 1;
+        while (left < right) {
+            int minHeigh = Integer.MAX_VALUE;
+            for (int i = left; i <= right; i++) {
+                minHeigh = heights[i] < minHeigh ? heights[i] : minHeigh;
+            }
+            int area = (right - left + 1) * minHeigh;
+            maxArea = maxArea > area ? maxArea : area;
+            if (heights[left] < heights[right]) left++;
+            else right--;
+        }
+        return maxArea;
+    }
+
+
+    // 从两边往中间走，寻找最大的 这个部分case跑不过。需要把断点去掉
+    public int largestRectangleArea1(int[] heights) {
         //Special case
         if (heights.length <= 1) return 0;
         int left = 0;

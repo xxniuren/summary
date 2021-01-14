@@ -21,11 +21,8 @@ public class Solution6 {
     public static void main(String[] args) {
         String s = "PAYPALISHIRING";
         Solution6 solution = new Solution6();
-        System.out.println(solution.convert(s, 3));
+        System.out.println(solution.convert("ab", 1));
     }
-
-
-
 
     public String convert(String s, int numRows) {
         if (s == null || s.isEmpty()) return "";

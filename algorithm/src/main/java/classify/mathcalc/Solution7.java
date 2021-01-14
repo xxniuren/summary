@@ -12,7 +12,21 @@ public class Solution7 {
 
     public static void main(String[] args) {
         Solution7 solution = new Solution7();
-        System.out.println(solution.reverse(1534236469));
+        System.out.println(solution.reverse1(123));
+    }
+
+    public int reverse1(int x) {
+        int symb = x > 0 ? 1 : -1;
+        long val = 0;
+        int absX = Math.abs(x);
+        while (absX > 0) {
+            int mod = absX % 10;
+            if ((val * 10 + mod) > Integer.MAX_VALUE) {return 0;}
+            val = val * 10 + mod;
+            absX = absX / 10;
+        }
+        int res = val == (int) val ? (int)val : 0;
+        return res * symb;
     }
 
     public int reverse(int x) {

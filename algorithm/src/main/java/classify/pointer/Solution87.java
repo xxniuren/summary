@@ -18,12 +18,21 @@ public class Solution87 {
     }
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         int mPos = m - 1, nPos = n - 1;
-        int pos = m + n - 1;
-        for (; pos >= 0; pos--) { // nPos >= 0是为了防止指针越界
-            if (mPos < 0 || (nPos >= 0 && nums2[nPos] > nums1[mPos])) {
-                nums1[pos] = nums2[nPos--];
+        for (int i = nums1.length - 1; i >= 0; i--) {
+            if (mPos < 0) {
+                nums1[i] = nums2[nPos];
+                nPos--;
+            } else if (nPos < 0) {
+                nums1[i] = nums1[mPos];
+                mPos--;
             } else {
-                nums1[pos] = nums1[mPos--];
+                if (nums1[mPos] >= nums2[nPos]) {
+                    nums1[i] = nums1[mPos];
+                    mPos--;
+                } else {
+                    nums1[i] = nums2[nPos];
+                    nPos--;
+                }
             }
         }
     }

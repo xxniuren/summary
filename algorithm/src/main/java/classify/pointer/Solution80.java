@@ -21,12 +21,13 @@ public class Solution80 {
      * @return
      */
     public int removeDuplicates(int[] nums) {
-        int p = 0;
-        for (int num : nums) {
-            if (p < 2 || num > nums[p - 2]) {
-                nums[p++] = num;
+        int pos = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (i < 2 || nums[pos - 2] != nums[i]) {
+                nums[pos] = nums[i];
+                pos++;
             }
         }
-        return p;
+        return pos;
     }
 }
