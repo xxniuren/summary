@@ -11,7 +11,7 @@ public class Solution5 {
 
     public static void main(String[] args) {
         Solution5 solution = new Solution5();
-        String s = "baab";
+        String s = "ac";
         String str = solution.longestPalindrome(s);
         System.out.println(str);
     }
