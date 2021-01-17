@@ -1,5 +1,7 @@
 package classify.dp;
 
+import java.util.*;
+
 /**
  * @author: yushuang
  * @email: yushuang@qiyi.com
@@ -12,6 +14,11 @@ public class Solution64 {
         Solution64 solution = new Solution64();
         int grid[][] = {{1,3,1},{1,5,1},{4,2,1}};
         System.out.println(solution.minPathSum(grid));
+        Map<String, String> map = new HashMap<>();
+        map.put("aa", "bb");
+
+        List<String> list = new LinkedList<>();
+        list.add("a");
     }
 
     public int minPathSum(int[][] grid) {
