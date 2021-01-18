@@ -12,7 +12,7 @@ public class Solution53 {
     public static void main(String[] args) {
         Solution53 solution = new Solution53();
         int nums[] = {-2,1,-3,4,-1,2,1,-5,4};
-        int max = solution.maxSubArray(nums);
+        int max = solution.maxSubArray1(nums);
         System.out.println(max);
     }
 
@@ -23,6 +23,19 @@ public class Solution53 {
         dp[0] = nums[0] > 0 ? nums[0] : 0;
         for (int i = 1; i <= nums.length - 1; i++) {
             dp[i] = Math.max(dp[i - 1] + nums[i], nums[i]);
+            max = max > dp[i] ? max : dp[i];
+        }
+        return max;
+    }
+
+    public int maxSubArray1(int[] nums) {
+        int dp[] = new int[nums.length];
+        dp[0] = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            dp[i] = Math.max(dp[i - 1] + nums[i], nums[i]);
+        }
+        int max = Integer.MIN_VALUE;
+        for (int i = 0; i < nums.length; i++) {
             max = max > dp[i] ? max : dp[i];
         }
         return max;
