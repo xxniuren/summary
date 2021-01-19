@@ -25,7 +25,7 @@ public class Solution45 {
 
     public static void main(String[] args) {
         Solution45 solution = new Solution45();
-        int[] nums = {2,3,1,1,4};
+        int[] nums = {1,1,2,1,1};
         int step = solution.jump(nums);
         System.out.println(step);
     }
@@ -49,17 +49,64 @@ public class Solution45 {
      * @return
      */
     public int jump(int[] nums) {
-        if (nums.length == 0) return 0;
-        int step = 0;
+        if (nums == null || nums.length == 0) return 0;
         int currReach = 0, nextReach = nums[0];
+        int step = 0;
         for (int i = 0; i < nums.length; i++) {
-            if (currReach < i) {
-                // 必须要跳跃了
+            if (i > currReach) {
                 step++;
                 currReach = nextReach;
             }
-            nextReach = Math.max(nextReach, (i + nums[i]));
+            nextReach = i + nums[i] > nextReach ? i + nums[i] : nextReach;
         }
         return step;
     }
+
+     public int jump1(int[] nums) {
+         if (nums.length == 0) return 0;
+         int step = 0;
+         int currReach = 0, nextReach = nums[0];
+         for (int i = 0; i < nums.length; i++) {
+             if (currReach < i) {
+                 // 必须要跳跃了
+                 step++;
+                 currReach = nextReach;
+             }
+             nextReach = Math.max(nextReach, (i + nums[i]));
+         }
+         return step;
+     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    public int jump(int[] nums) {
+//        if (nums.length == 0) return 0;
+//        int step = 0;
+//        int currReach = 0, nextReach = nums[0];
+//        for (int i = 0; i < nums.length; i++) {
+//            if (currReach < i) {
+//                // 必须要跳跃了
+//                step++;
+//                currReach = nextReach;
+//            }
+//            nextReach = Math.max(nextReach, (i + nums[i]));
+//        }
+//        return step;
+//    }
 }
