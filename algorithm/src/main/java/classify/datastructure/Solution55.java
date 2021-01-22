@@ -13,7 +13,7 @@ public class Solution55 {
 
     public static void main(String[] args) {
         Solution55 solution = new Solution55();
-        int[] nums = {3,2,1,0,4};
+        int[] nums = {3,2,3,0,4};
         boolean canJump = solution.canJump(nums);
         System.out.println(canJump);
     }
