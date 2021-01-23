@@ -8,7 +8,7 @@ package classify.linklist;
  **/
 public class Solution23 {
 
-    //通过归并排序合并n个链表
+    //也不是非得递归
 
 //    public ListNode mergeKLists(ListNode[] lists) {
 //        int left = 0;

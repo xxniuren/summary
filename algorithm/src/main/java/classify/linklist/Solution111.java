@@ -29,13 +29,14 @@ public class Solution111 {
         if (head == null) return null;
         ListNode root = new ListNode(-1);
         root.next = head;
-        ListNode pre = root, curr = root.next, next = curr.next;
-        while (next != null) {
+        ListNode pre = root, curr = root.next;
+        while (curr.next != null) {
+            ListNode next = curr.next;
+            if (null == next) return root.next;
             ListNode tmp = next.next;
             next.next = pre.next;
             pre.next = next;
             curr.next = tmp;
-            next = curr.next;
         }
         return root.next;
     }
