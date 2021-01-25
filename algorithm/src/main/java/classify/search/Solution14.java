@@ -17,21 +17,37 @@ public class Solution14 {
 
     public String longestCommonPrefix(String[] strs) {
         if (strs == null || strs.length == 0) return "";
-        if (strs.length == 1) return strs[0];
-        String fStr = strs[0];
-        int cnt = 0;
-        for (; cnt < fStr.length(); cnt++) {
-            char c = fStr.charAt(cnt);
+        if(strs.length == 1) return strs[0];
+        StringBuffer sb = new StringBuffer();
+        for (int i = 0; i < strs[0].length(); i++) {
+            char c = strs[0].charAt(i);
             for (int j = 1; j < strs.length; j++) {
-                String lStr = strs[j];
-                if (cnt > lStr.length() - 1) {
-                    return fStr.substring(0, cnt);
-                }
-                if (lStr.charAt(cnt) != c) {
-                    return fStr.substring(0, cnt);
+                if (strs[j].length() - 1 < i || strs[j].charAt(i) != c) {
+                    return sb.toString();
                 }
             }
+            sb.append(c);
         }
-        return fStr.substring(0, cnt);
+        return sb.toString();
     }
+
+//    public String longestCommonPrefix(String[] strs) {
+//        if (strs == null || strs.length == 0) return "";
+//        if (strs.length == 1) return strs[0];
+//        String fStr = strs[0];
+//        int cnt = 0;
+//        for (; cnt < fStr.length(); cnt++) {
+//            char c = fStr.charAt(cnt);
+//            for (int j = 1; j < strs.length; j++) {
+//                String lStr = strs[j];
+//                if (cnt > lStr.length() - 1) {
+//                    return fStr.substring(0, cnt);
+//                }
+//                if (lStr.charAt(cnt) != c) {
+//                    return fStr.substring(0, cnt);
+//                }
+//            }
+//        }
+//        return fStr.substring(0, cnt);
+//    }
 }

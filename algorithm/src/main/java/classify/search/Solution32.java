@@ -13,34 +13,33 @@ import java.util.List;
 public class Solution32 {
     public static void main(String[] args) {
         Solution32 solution = new Solution32();
-        String s = "(()";
+        String s = ")()())";
         int val = solution.longestValidParentheses(s);
         System.out.println(val);
     }
 
     public int longestValidParentheses(String s) {
-        if (s == null || s.isEmpty()) return 0;
-        List<Integer> list = new ArrayList<>();
-        int[] val = new int[s.length()];
+        if (s == null || s.length() == 0) return 0;
+        List<Integer> list = new ArrayList();
+        int[] data = new int[s.length()];
         for (int i = 0; i < s.length(); i++) {
-            if (s.charAt(i) == '(') {
+            char c = s.charAt(i);
+            if (c == '(') {
                 list.add(i);
-            } else {
+            } else if (c == ')') {
                 if (list.isEmpty()) {
                     continue;
                 } else {
-                    int pre = list.get(list.size() - 1);
-                    list.remove(list.size() - 1);
-                    val[pre] = 1;
-                    val[i] = 1;
+                    int index = list.get(list.size() - 1);
+                    data[index] = 1;
+                    data[i] = 1;
                 }
             }
         }
-        int maxLen = 0;
-        int len = 0;
-        for (int i = 0; i < val.length; i++) {
-            if (val[i] == 0) {
-                maxLen = len > maxLen ? len : maxLen;
+        int maxLen = 0, len = 0;
+        for (int i = 0; i < data.length; i++) {
+            if (data[i] == 0) {
+                maxLen = maxLen > len ? maxLen : len;
                 len = 0;
             } else {
                 len++;
