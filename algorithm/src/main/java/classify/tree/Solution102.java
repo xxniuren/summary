@@ -14,24 +14,31 @@ import java.util.Queue;
 public class Solution102 {
 
     public List<List<Integer>> levelOrder(TreeNode root) {
+        if (null == root) return new ArrayList<>();
         //利用队列来进行层序遍历
         Queue<TreeNode> queue = new ArrayDeque<>();
-        List<List<Integer>> vals = new ArrayList<>();
-        if (null == root) return new ArrayList<>();
+        List<List<Integer>> lists = new ArrayList<>();
         queue.offer(root);
+        int cnt = 1;
         while (!queue.isEmpty()) {
-            int cnt = queue.size();
-            List<Integer> val = new ArrayList<>();
-            while (cnt > 0) {
+            int levelCnt = 0;
+            List<Integer> list = new ArrayList<>();
+            for (int i = 0; i < cnt;i++) {
                 TreeNode node = queue.poll();
-                if (node.left != null) queue.offer(node.left);
-                if (node.right != null) queue.offer(node.right);
-                cnt--;
-                val.add(node.val);
+                list.add(node.val);
+                if (node.left != null) {
+                    queue.offer(node.left);
+                    levelCnt++;
+                }
+                if (node.right != null) {
+                    queue.offer(node.right);
+                    levelCnt++;
+                }
             }
-            vals.add(val);
+            lists.add(list);
+            cnt = levelCnt;
         }
-        return vals;
+        return lists;
     }
 
     public class TreeNode {
