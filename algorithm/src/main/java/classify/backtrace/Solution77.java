@@ -20,21 +20,22 @@ public class Solution77 {
         List<List<Integer>> lists = new ArrayList<>();
         int[] nums = new int[n];
         for (int i = 0; i < n; i++) nums[i] = i + 1;
-        backtrace(lists, new ArrayList<>(), nums, 0, k);
+        backtrace(lists, new ArrayList<>(), nums, k, 0);
         return lists;
     }
 
-    // 全排列用visited，取部分用start
-    public void backtrace(List<List<Integer>> lists, List<Integer> list, int[] nums, int start, int k) {
+    public void backtrace(List<List<Integer>> lists, List<Integer> list, int[] nums, int k, int index) {
         if (list.size() == k) {
             lists.add(new ArrayList<>(list));
             return;
         }
-        for (int i = start; i < nums.length; i++) {
+        for (int i = index; i < nums.length; i++) {
             list.add(nums[i]);
-            backtrace(lists, list, nums, i + 1, k);
+            backtrace(lists, list, nums, k, i + 1);
             list.remove(list.size() - 1);
         }
     }
+
+
 
 }

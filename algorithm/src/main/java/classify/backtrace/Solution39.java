@@ -37,33 +37,23 @@ public class Solution39 {
      * 10. 把 7 拿出来，不满足，此时回到1步骤。
      **/
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
-        Arrays.sort(candidates);
         List<List<Integer>> lists = new ArrayList<>();
+        Arrays.sort(candidates);
         backtrace(lists, new ArrayList<>(), candidates, target, 0);
         return lists;
     }
 
-    /**
-     * 这里的start表示从哪里开始查找
-     *
-     * @param lists
-     * @param list
-     * @param candidates
-     * @param remain
-     * @param start
-     */
-    public void backtrace(List<List<Integer>> lists, List<Integer> list, int[] candidates, int remain, int start) {
-        if (remain < 0) {
-            return;
-        } else if (remain == 0) {
+    public void backtrace(List<List<Integer>> lists, List<Integer> list, int[] candidates, int target, int index) {
+        if (target == 0) {
             lists.add(new ArrayList<>(list));
             return;
-        } else {
-            for (int i = start; i < candidates.length; i++) {
-                list.add(candidates[i]);
-                backtrace(lists, list, candidates, remain - candidates[i], i);
-                list.remove(list.size() - 1);
-            }
+        }
+        if (target < 0) return;
+        for (int i = index; i < candidates.length; i++) {
+            list.add(candidates[i]);
+            backtrace(lists, list, candidates, target - candidates[i], i);
+            list.remove(list.size() - 1);
         }
     }
+
 }
