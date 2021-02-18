@@ -46,8 +46,7 @@ public class Solution22 {
 
     public void backtrace(List<String> lists, List<String> list, int left, int right, int n) {
         if (left == n && right == n) {
-            lists.add(list.toString());
-
+            lists.add(list2String(list));
             return;
         }
         if (left < n) {
@@ -60,5 +59,13 @@ public class Solution22 {
             backtrace(lists, list, left, right + 1, n);
             list.remove(list.size() - 1);
         }
+    }
+
+    private String list2String(List<String> list) {
+        String res = "";
+        for (String s : list) {
+            res += s;
+        }
+        return res;
     }
 }
